@@ -5,719 +5,558 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Coach Jimzon | Professional Chess Coaching</title>
-
   <meta name="description" content="Improve faster and play smarter with Coach Jimzon’s professional online chess coaching. Personalized lessons for beginners, tournament players, and adult learners worldwide.">
 
-  <meta name="keywords" content="Chess Coach, Online Chess Lessons, Chess Training, Arena Grandmaster, Coach Jimzon, Chess Coaching Philippines">
-
-  <meta name="author" content="Coach Jimzon">
-
-  <meta name="robots" content="index, follow">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Coach Jimzon | Professional Chess Coaching">
-  <meta property="og:description" content="Improve faster and play smarter with personalized online chess coaching.">
-  <meta property="og:image" content="images/preview.png">
-  <meta property="og:url" content="https://coachjimzon.com">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Coach Jimzon | Professional Chess Coaching">
-  <meta name="twitter:description" content="Improve faster and play smarter with personalized online chess coaching.">
-  <meta name="twitter:image" content="images/preview.png">
-
-  <!-- favicon -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Montserrat:wght@800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
+    body { font-family: 'Inter', sans-serif; }
+    .logo-font { font-family: 'Montserrat', sans-serif; }
+    
+    .premium-headline {
+      font-weight: 900;
+      letter-spacing: -0.05em; 
+      line-height: 1.1;
     }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(30, 41, 59, 0.9) 100%);
+    }
+
+    #menu-btn .line { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    #menu-btn.active .line-1 { transform: translateY(4px) rotate(45deg); background-color: #1D4ED8; }
+    #menu-btn.active .line-2 { transform: translateY(-4px) rotate(-45deg); background-color: #1D4ED8; width: 1.5rem; }
+
+    .animate-float { animation: float 6s ease-in-out infinite; }
+    @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+
+    .card-premium { background: white; border: 1px solid rgba(0,0,0,0.05); transition: all 0.3s ease; }
+    .card-premium:hover { transform: translateY(-10px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1); }
+    .faq-icon { transition: transform 0.3s ease; }
   </style>
 </head>
 
+<body class="bg-[#FBFDFF] text-[#0F172A] overflow-x-hidden">
 
-
-<body class="bg-[#F8FAFC] text-[#0F172A]">
-
-<!-- NAVBAR -->
-<header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
-
-    <!-- Logo -->
-    <h1 class="text-xl font-semibold tracking-wide">
+<header class="fixed top-4 left-0 right-0 z-50 px-4 md:px-0">
+  <nav class="max-w-6xl mx-auto glass rounded-full px-6 py-3 flex items-center justify-between shadow-lg relative z-50">
+    <h1 class="text-xl logo-font font-bold tracking-tighter uppercase">
       <span class="text-[#1D4ED8]">COACH</span><span class="text-[#FACC15]">JIMZON</span>
     </h1>
 
-    <!-- Desktop Nav -->
- <nav id="desktopNav" class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
-  <a href="#" class="text-[#1D4ED8] border-b-2 border-[#1D4ED8] pb-1">Home</a>
-  <a href="#about" class="hover:text-[#FACC15] transition">About</a>
-  <a href="#coaching" class="hover:text-[#FACC15] transition">Coaching</a>
-  <a href="#testimonials" class="hover:text-[#FACC15] transition">Testimonials</a>
-  <a href="#faq" class="hover:text-[#FACC15] transition">FAQ</a>
-  <a href="#contact" class="hover:text-[#FACC15] transition">Contact</a>
-</nav>
-    <!-- Right Side -->
-    <div class="flex items-center gap-4">
-
-      <!-- Book Button Desktop -->
-      <a href="https://cal.com/coachjimzon/trial-class-with-coach-jimzon" target="_blank" class="hidden md:block">
-        <button class="bg-[#1D4ED8] text-white px-5 py-2 rounded-full text-sm hover:scale-105 transition">
-          Book
-        </button>
-      </a>
-
-      <!-- Burger Button -->
-      <button id="menuBtn" class="md:hidden text-3xl text-[#0F172A]">
-        ☰
-      </button>
+    <div class="hidden lg:flex gap-8 text-[13px] font-bold uppercase tracking-wide text-gray-600">
+      <a href="#" class="hover:text-[#1D4ED8] transition">Home</a>
+      <a href="#about" class="hover:text-[#1D4ED8] transition">About</a>
+      <a href="#coaching" class="hover:text-[#1D4ED8] transition">Coaching</a>
+      <a href="#how-it-works" class="hover:text-[#1D4ED8] transition">Process</a>
+      <a href="#testimonials" class="hover:text-[#1D4ED8] transition">Results</a>
+      <a href="#faq" class="hover:text-[#1D4ED8] transition">FAQ</a>
     </div>
 
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg">
-    <nav class="flex flex-col px-6 py-4 text-gray-700 font-medium space-y-4">
-      <a href="#" class="hover:text-[#FACC15] transition">Home</a>
-      <a href="#about" class="hover:text-[#FACC15] transition">About</a>
-      <a href="#coaching" class="hover:text-[#FACC15] transition">Coaching</a>
-      <a href="#testimonials" class="hover:text-[#FACC15] transition">Testimonials</a>
-      <a href="#faq" class="hover:text-[#FACC15] transition">FAQ</a>
-      <a href="#contact" class="hover:text-[#FACC15] transition">Contact</a>
-
-      <a href="https://cal.com/coachjimzon/trial-class-with-coach-jimzon" target="_blank">
-        <button class="bg-[#1D4ED8] text-white px-5 py-3 rounded-full text-sm w-full">
-          Book a Lesson
+    <div class="flex items-center gap-4">
+      <a href="https://cal.com/coachjimzon/trial-class-with-coach-jimzon" target="_blank" class="hidden sm:block">
+        <button class="bg-[#1D4ED8] text-white px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest hover:bg-blue-700 transition shadow-md shadow-blue-200">
+          Book Trial
         </button>
       </a>
-    </nav>
+      <button id="menu-btn" class="lg:hidden flex flex-col items-end gap-[6px] focus:outline-none p-2 bg-blue-50 rounded-lg">
+        <span class="line line-1 w-6 h-[2px] bg-[#0F172A] rounded-full"></span>
+        <span class="line line-2 w-4 h-[2px] bg-[#1D4ED8] rounded-full"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="fixed inset-0 bg-white/98 backdrop-blur-2xl z-40 flex flex-col items-center justify-center gap-8 text-2xl font-black translate-x-full transition-transform duration-500 lg:hidden">
+    <a href="#" class="mobile-link">HOME</a>
+    <a href="#about" class="mobile-link">ABOUT</a>
+    <a href="#coaching" class="mobile-link">COACHING</a>
+    <a href="#testimonials" class="mobile-link">RESULTS</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
+    <a href="https://cal.com/coachjimzon/trial-class-with-coach-jimzon" class="mt-4 bg-[#1D4ED8] text-white px-10 py-4 rounded-full shadow-xl">BOOK TRIAL</a>
   </div>
 </header>
 
-
-<!-- HERO -->
-<section class="relative text-white">
-
-  <div class="absolute inset-0">
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+  <div class="absolute inset-0 z-0">
     <img src="images/chess-bg.png" class="w-full h-full object-cover">
-    <div class="absolute inset-0 bg-[#0F172A]/85"></div>
+    <div class="absolute inset-0 hero-gradient"></div>
   </div>
-
-  <div class="relative max-w-7xl mx-auto px-6 md:px-12 py-24 grid md:grid-cols-2 gap-12 items-center">
-
-    <div>
-      <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
-        Improve Faster.<br>
-        <span class="text-[#FACC15]">Play Smarter.</span>
-      </h2>
-
-      <p class="text-gray-300 mb-8 max-w-md">
-        Structured chess coaching designed to help you gain rating and confidence.
-      </p>
-
-     <a href="https://cal.com/coachjimzon/trial-class-with-coach-jimzon" target="_blank">
-        <button class="bg-[#FACC15] text-black px-6 py-3 rounded-full font-semibold mb-8">
-          Book Your First Lesson
-        </button>
-      </a>
-
-      <div class="border-l-2 border-[#1D4ED8] pl-4">
-        <p class="text-[#FACC15] font-semibold text-sm">AGM JIMZON TRANGIA</p>
-        <p class="text-gray-300 text-sm">Arena Grandmaster</p>
-        <p class="text-gray-400 text-sm">10 Years Coaching Experience</p>
-        <p class="text-gray-400 text-sm">2500+ Lichess & Chess.com Rating</p>
-           <p class="text-gray-400 text-sm">2200+ National Rating</p>
-            <p class="text-gray-400 text-sm">2100+ FIDE Rating</p>
-        
+  <div class="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center py-20">
+    <div data-aos="fade-right">
+      <span class="inline-block px-4 py-1 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6">Arena Grandmaster Instruction</span>
+      <h2 class="premium-headline text-5xl md:text-7xl text-white mb-6">Improve Faster.<br><span class="text-[#FACC15]">Play Smarter.</span></h2>
+      <p class="text-lg text-gray-300 mb-10 max-w-md leading-relaxed font-medium">Personalized chess coaching designed to help you gain rating and confidence through elite strategies.</p>
+      <a href="https://cal.com/coachjimzon/trial-class-with-coach-jimzon" target="_blank" class="bg-[#FACC15] text-black px-8 py-4 rounded-xl font-black text-lg hover:scale-105 transition shadow-xl shadow-yellow-500/20 inline-block">Book First Lesson</a>
+      <div class="border-l-4 border-[#1D4ED8] pl-6 mt-12">
+        <p class="text-[#FACC15] font-black text-xl uppercase tracking-tighter">AGM Jimzon Trangia</p>
+        <div class="flex flex-wrap gap-x-4 text-gray-400 text-[11px] font-bold uppercase mt-2 tracking-widest">
+            <span>♟️ 2500+ Online</span><span>🇵🇭 2200+ National</span><span>🌍 2100+ FIDE</span>
+        </div>
       </div>
     </div>
-
-    <div class="md:block">
-      <img src="images/hero-img.png" class="w-full max-w-xl ml-auto">
-    </div>
-
-  </div>
-</section>
-
-<!-- STATS -->
-<section class="-mt-12 relative z-10">
-  <div class="max-w-5xl mx-auto px-6">
-    <div class="bg-white rounded-2xl shadow p-6 grid grid-cols-2 md:grid-cols-4 text-center">
-
-      <div>
-        <p class="text-xl font-bold text-[#1D4ED8]">100+</p>
-        <p class="text-gray-500 text-sm">Students</p>
-      </div>
-
-      <div>
-        <p class="text-xl font-bold text-[#1D4ED8]">2500+</p>
-        <p class="text-gray-500 text-sm">Online Rating</p>
-      </div>
-
-      <div>
-        <p class="text-xl font-bold text-[#FACC15]">20+</p>
-        <p class="text-gray-500 text-sm">Countries</p>
-      </div>
-
-      <div>
-        <p class="text-xl font-bold">⭐ 4.9/5</p>
-        <p class="text-gray-500 text-sm">Rating</p>
-      </div>
-
+    <div class="relative" data-aos="zoom-in">
+      <img src="images/hero-img.png" class="w-full max-w-lg mx-auto animate-float drop-shadow-2xl">
     </div>
   </div>
 </section>
 
-<!-- WHAT YOU GET -->
-<section id="coaching"  class="py-24 bg-[#F8FAFC] relative overflow-hidden">
-
-  <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-200/20 blur-3xl rounded-full"></div>
-
-  <div class="relative max-w-7xl mx-auto px-6">
-
-    <div class="text-center mb-16">
-      <p class="text-[#FACC15] font-semibold tracking-widest uppercase text-sm mb-3">
-        Premium Coaching
-      </p>
-
-      <h3 class="text-4xl font-bold text-[#0F172A]">
-        What You Get
-      </h3>
-
-      <p class="text-gray-500 mt-4 max-w-2xl mx-auto">
-        Personalized training designed to help you improve faster and play smarter.
-      </p>
+<section class="relative z-20 -mt-10 max-w-6xl mx-auto px-6">
+    <div class="bg-white rounded-[2.5rem] shadow-2xl p-8 md:p-12 grid grid-cols-2 md:grid-cols-4 gap-8 border border-gray-50">
+      <div class="text-center" data-aos="fade-up"><p class="text-4xl font-black text-[#1D4ED8]">100+</p><p class="text-gray-400 text-[10px] font-black uppercase tracking-widest mt-2">Active Students</p></div>
+      <div class="text-center" data-aos="fade-up" data-aos-delay="100"><p class="text-4xl font-black text-[#1D4ED8]">2500+</p><p class="text-gray-400 text-[10px] font-black uppercase tracking-widest mt-2">Peak Rating</p></div>
+      <div class="text-center" data-aos="fade-up" data-aos-delay="200"><p class="text-4xl font-black text-[#FACC15]">20+</p><p class="text-gray-400 text-[10px] font-black uppercase tracking-widest mt-2">Countries</p></div>
+      <div class="text-center" data-aos="fade-up" data-aos-delay="300"><p class="text-4xl font-black text-[#0F172A]">⭐ 4.9</p><p class="text-gray-400 text-[10px] font-black uppercase tracking-widest mt-2">Satisfaction</p></div>
     </div>
-
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <div class="group bg-white rounded-3xl p-8 shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-100">
-        <div class="w-14 h-14 flex items-center justify-center rounded-2xl bg-blue-100 text-3xl mb-6 group-hover:scale-110 transition">
-          👤
-        </div>
-        <h4 class="text-2xl font-semibold text-[#0F172A] mb-3">
-          1-on-1 Coaching
-        </h4>
-        <p class="text-gray-500 leading-relaxed">
-          Personalized lessons tailored to your exact level and goals.
-        </p>
-      </div>
-
-      <div class="group bg-white rounded-3xl p-8 shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-100">
-        <div class="w-14 h-14 flex items-center justify-center rounded-2xl bg-yellow-100 text-3xl mb-6 group-hover:scale-110 transition">
-          🔍
-        </div>
-        <h4 class="text-2xl font-semibold text-[#0F172A] mb-3">
-          Game Analysis
-        </h4>
-        <p class="text-gray-500 leading-relaxed">
-          Discover mistakes, fix weaknesses, and sharpen decision-making.
-        </p>
-      </div>
-
-      <div class="group bg-white rounded-3xl p-8 shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-100">
-        <div class="w-14 h-14 flex items-center justify-center rounded-2xl bg-blue-100 text-3xl mb-6 group-hover:scale-110 transition">
-          🎯
-        </div>
-        <h4 class="text-2xl font-semibold text-[#0F172A] mb-3">
-          Training Plan
-        </h4>
-        <p class="text-gray-500 leading-relaxed">
-          A structured roadmap for long-term chess improvement.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- ABOUT SECTION -->
-<section id="about" class="py-24 bg-white relative overflow-hidden">
-
-  <!-- glow -->
-  <div class="absolute right-0 top-10 w-[400px] h-[400px] bg-blue-100/30 blur-3xl rounded-full"></div>
-
-  <div class="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-
-    <!-- IMAGE -->
-    <div class="relative">
-      <img src="images/about.png" class="w-full max-w-md mx-auto rounded-3xl shadow-2xl">
-
-      <!-- badge -->
-      <div class="absolute -bottom-6 -right-6 bg-[#FACC15] text-black px-6 py-4 rounded-2xl shadow-xl">
-        <p class="text-2xl font-bold">10+ Years</p>
-        <p class="text-sm font-medium">Coaching Experience</p>
-      </div>
-    </div>
-
-    <!-- CONTENT -->
-    <div>
-
-      <p class="text-[#FACC15] font-semibold tracking-widest uppercase text-sm mb-3">
-        About Coach Jimzon
-      </p>
-
-      <h3 class="text-4xl font-bold text-[#0F172A] mb-6">
-        Helping Students Improve Faster & Play Smarter
-      </h3>
-
-      <p class="text-gray-600 leading-relaxed mb-6">
-        I’m AGM Jimzon Trangia, an Arena Grandmaster and experienced chess coach with over 10 years of coaching students worldwide.
-      </p>
-
-      <p class="text-gray-600 leading-relaxed mb-8">
-        I’ve helped beginners, tournament players, and adult learners gain rating, improve strategy, and build confidence through structured lessons and personalized training plans.
-      </p>
-
-      <!-- achievements -->
-      <div class="grid grid-cols-2 gap-6 mb-8">
-
-        <div class="bg-[#F8FAFC] rounded-2xl p-5 shadow-sm">
-          <p class="text-2xl font-bold text-[#1D4ED8]">2200+</p>
-          <p class="text-gray-500 text-sm">National Rating</p>
-        </div>
-
-        <div class="bg-[#F8FAFC] rounded-2xl p-5 shadow-sm">
-          <p class="text-2xl font-bold text-[#1D4ED8]">2500+</p>
-          <p class="text-gray-500 text-sm">Online Rating</p>
-        </div>
-
-        <div class="bg-[#F8FAFC] rounded-2xl p-5 shadow-sm">
-          <p class="text-2xl font-bold text-[#1D4ED8]">100+</p>
-          <p class="text-gray-500 text-sm">Students Coached</p>
-        </div>
-
-        <div class="bg-[#F8FAFC] rounded-2xl p-5 shadow-sm">
-          <p class="text-2xl font-bold text-[#1D4ED8]">20+</p>
-          <p class="text-gray-500 text-sm">Countries Reached</p>
-        </div>
-
-      </div>
-
-      <a href="booking.html">
-        <button class="bg-[#1D4ED8] text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
-          Start Learning →
-        </button>
-      </a>
-
-    </div>
-
-  </div>
 </section>
 
-
-
-
-<!-- HOW IT WORKS -->
-<section class="py-24 bg-[#F8FAFC]">
+<section id="coaching" class="py-32 bg-[#FBFDFF]">
   <div class="max-w-7xl mx-auto px-6 text-center">
-
-    <p class="text-[#FACC15] font-semibold tracking-widest uppercase text-sm mb-3">
-      Simple Process
-    </p>
-
-    <h3 class="text-4xl font-bold text-[#0F172A] mb-14">
-      How It Works
-    </h3>
-
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <div class="bg-white rounded-3xl p-8 shadow-md">
-        <div class="text-4xl mb-4">📅</div>
-        <h4 class="text-xl font-semibold mb-3">Book a Lesson</h4>
-        <p class="text-gray-500">
-          Choose your schedule and reserve your coaching session online.
-        </p>
-      </div>
-
-      <div class="bg-white rounded-3xl p-8 shadow-md">
-        <div class="text-4xl mb-4">♟️</div>
-        <h4 class="text-xl font-semibold mb-3">Get a Training Plan</h4>
-        <p class="text-gray-500">
-          Receive lessons tailored to your level and goals.
-        </p>
-      </div>
-
-      <div class="bg-white rounded-3xl p-8 shadow-md">
-        <div class="text-4xl mb-4">🚀</div>
-        <h4 class="text-xl font-semibold mb-3">Improve Faster</h4>
-        <p class="text-gray-500">
-          Gain confidence, improve strategy, and increase your rating.
-        </p>
-      </div>
-
+    <div class="mb-24" data-aos="fade-up">
+      <h3 class="premium-headline text-4xl md:text-5xl text-[#0F172A] mb-4">World-Class Coaching</h3>
+      <p class="text-gray-500 max-w-xl mx-auto italic font-medium">Not just lessons. A complete ecosystem for your chess improvement.</p>
     </div>
-
-  </div>
-</section>
-<!-- TESTIMONIALS -->
-<section id="testimonials" class="py-24 bg-white relative overflow-hidden">
-
-  <!-- glow -->
-  <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-yellow-100/30 blur-3xl rounded-full"></div>
-
-  <div class="relative max-w-7xl mx-auto px-6">
-
-    <!-- heading -->
-    <div class="text-center mb-16">
-      <p class="text-[#FACC15] font-semibold tracking-widest uppercase text-sm mb-3">
-        Success Stories
-      </p>
-
-      <h3 class="text-4xl font-bold text-[#0F172A]">
-        Results from Students
-      </h3>
-
-      <p class="text-gray-500 mt-4 max-w-2xl mx-auto">
-        Real students. Real progress. Real coaching results.
-      </p>
-    </div>
-
-    <!-- slider -->
-    <div class="overflow-hidden relative">
-      <div id="testimonialTrack" class="flex transition-transform duration-700 ease-in-out">
-
-        <!-- card 1 -->
-        <div class="w-full md:w-1/2 flex-shrink-0 px-3">
-          <div class="group bg-[#F8FAFC] rounded-3xl p-8 shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-100">
-            <div class="text-[#FACC15] text-xl mb-4">★★★★★</div>
-
-            <p class="text-gray-600 text-lg leading-relaxed mb-6">
-              “Improved from 600 to 1500 in just 1 year. Coach Jimzon’s structured lessons changed how I think in chess.”
-            </p>
-
-            <div class="flex items-center gap-4">
-              <img src="images/student1.jpg" class="w-12 h-12 rounded-full object-cover border-2 border-[#1D4ED8]">
-
-              <div>
-                <p class="font-semibold text-[#0F172A]">Iñigo D.</p>
-                <p class="text-gray-500 text-sm">🇵🇭  PH Student</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- card 2 -->
-        <div class="w-full md:w-1/2 flex-shrink-0 px-3">
-  <div class="group bg-[#F8FAFC] rounded-3xl p-8 shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-100">
-    <div class="text-[#FACC15] text-xl mb-4">★★★★★</div>
-
-    <p class="text-gray-600 text-lg leading-relaxed mb-6">
-      “I gained 500+ rating points in just 3 months and even won a local age-group state tournament! 
-      Players I used to lose to at my chess club and tournaments—I can beat them now.”
-    </p>
-
-    <div class="flex items-center gap-4">
-      <img src="images/student2.png" class="w-12 h-12 rounded-full object-cover border-2 border-[#FACC15]">
-
-      <div>
-        <p class="font-semibold text-[#0F172A]">Jayden H.</p>
-        <p class="text-gray-500 text-sm">🇺🇸 Junior Student</p>
+    <div class="grid md:grid-cols-3 gap-8 text-left">
+      <div class="p-10 rounded-[2.5rem] card-premium group" data-aos="fade-up">
+        <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-[#1D4ED8] group-hover:text-white transition-all">👤</div>
+        <h4 class="text-2xl font-black mb-4">1-on-1 Mastery</h4>
+        <p class="text-gray-500 text-sm font-medium">Personalized lessons focusing on your unique weaknesses and strengthening your intuition.</p>
+      </div>
+      <div class="bg-[#1D4ED8] p-10 rounded-[2.5rem] text-white shadow-xl shadow-blue-200 transition-transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center text-3xl mb-8">📊</div>
+        <h4 class="text-2xl font-black mb-4 text-[#FACC15]">Strategic Roadmap</h4>
+        <p class="text-blue-100 text-sm font-medium">Every student receives a custom training plan designed to hit specific rating targets.</p>
+      </div>
+      <div class="p-10 rounded-[2.5rem] card-premium group" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-[#FACC15] transition-all">🔍</div>
+        <h4 class="text-2xl font-black mb-4">Pro Game Analysis</h4>
+        <p class="text-gray-500 text-sm font-medium">Discover patterns of error and learn the "why" behind every move with professional critique.</p>
       </div>
     </div>
-  </div>
-</div>
-<!-- card 6 -->
-<div class="w-full md:w-1/2 flex-shrink-0 px-3">
-  <div class="group bg-[#F8FAFC] rounded-3xl p-8 shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-100">
-    <div class="text-[#FACC15] text-xl mb-4">★★★★★</div>
-
-    <p class="text-gray-600 text-lg leading-relaxed mb-6">
-      “I was stuck at the same level for a long time, but Coach Jimzon helped me understand the game on a deeper level. His lessons are practical, easy to apply, and have greatly improved my confidence and results.”
-    </p>
-
-    <div class="flex items-center gap-4">
-      <img src="images/student6.jpg" class="w-12 h-12 rounded-full object-cover border-2 border-[#1D4ED8]">
-
-      <div>
-        <p class="font-semibold text-[#0F172A]">Everette F.</p>
-        <p class="text-gray-500 text-sm">🇺🇸 Adult Learner</p>
-      </div>
-    </div>
-  </div>
-</div>
-        <!-- card 3 -->
-       
-   <div class="w-full md:w-1/2 flex-shrink-0 px-3">
-          <div class="group bg-[#F8FAFC] rounded-3xl p-8 shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-100">
-            <div class="text-[#FACC15] text-xl mb-4">★★★★★</div>
-
-            <p class="text-gray-600 text-lg leading-relaxed mb-6">
-              “The lessons are fun, practical, and easy to understand.”
-            </p>
-
-            <div class="flex items-center gap-4">
-              <img src="images/student3.png" class="w-12 h-12 rounded-full object-cover border-2 border-[#FACC15]">
-
-              <div>
-                <p class="font-semibold text-[#0F172A]">Noah L.</p>
-                <p class="text-gray-500 text-sm">🇦🇺 Beginner Student</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- card 4 -->
-      <div class="w-full md:w-1/2 flex-shrink-0 px-3">
-          <div class="group bg-[#F8FAFC] rounded-3xl p-8 shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-100">
-            <div class="text-[#FACC15] text-xl mb-4">★★★★★</div>
-
-            <p class="text-gray-600 text-lg leading-relaxed mb-6">
-              “Coach Jimzon helped me prepare for tournaments and improve my confidence.”
-            </p>
-
-            <div class="flex items-center gap-4">
-              <img src="images/student4.jpg" class="w-12 h-12 rounded-full object-cover border-2 border-[#1D4ED8]">
-
-              <div>
-                <p class="font-semibold text-[#0F172A]">Loriefe V.</p>
-                <p class="text-gray-500 text-sm">🇪🇸 Tournament Player</p>
-              </div>
-            </div>
-          </div>
-        </div>
-<!-- card 5 -->
-<div class="w-full md:w-1/2 flex-shrink-0 px-3">
-  <div class="group bg-[#F8FAFC] rounded-3xl p-8 shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-100">
-    <div class="text-[#FACC15] text-xl mb-4">★★★★★</div>
-
-   <p class="text-gray-600 text-lg leading-relaxed mb-6">
-  “From learning the basic principles of chess, I gradually became more confident and competitive. Now I’m winning school competitions and proudly representing my school and province in women’s events.”
-</p>
-
-    <div class="flex items-center gap-4">
-      <img src="images/student5.jpg" class="w-12 h-12 rounded-full object-cover border-2 border-[#FACC15]">
-
-      <div>
-        <p class="font-semibold text-[#0F172A]">Gleam A.</p>
-        <p class="text-gray-500 text-sm">🇵🇭 Junior Female Player</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-      </div>
-    </div>
-
-
   </div>
 </section>
 
+<section id="about" class="py-32 bg-white relative overflow-hidden">
+    
+    <div class="absolute top-0 right-0 w-1/3 h-full bg-[#FBFDFF] -z-0"></div>
+    <div class="absolute top-20 left-10 text-[12rem] font-black text-gray-50 opacity-40 select-none pointer-events-none uppercase tracking-tighter">
+        Mentor
+    </div>
 
-<!-- FAQ SECTION -->
-<section id="faq" class="py-24 bg-[#F8FAFC] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-12 gap-16 items-center">
+            
+            <div class="lg:col-span-5 relative" data-aos="fade-right">
+                <div class="absolute inset-0 bg-blue-100/40 blur-[100px] rounded-full transform -translate-x-10 translate-y-10"></div>
+                
+                <div class="relative z-10 rounded-[4rem] border-[12px] border-white shadow-[0_40px_100px_-20px_rgba(0,0,0,0.1)] overflow-hidden">
+                    <img src="images/about.png" alt="AGM Jimzon Trangia" class="w-full h-auto object-cover opacity-100 block">
+                    
+                    <div class="absolute bottom-6 left-6 right-6 p-6 bg-white/80 backdrop-blur-xl border border-white shadow-xl rounded-3xl">
+                        <p class="text-[#1D4ED8] text-[10px] font-black uppercase tracking-[0.4em] mb-1">Arena Grandmaster</p>
+                        <h4 class="text-[#0F172A] text-xl font-black uppercase tracking-tighter italic leading-none">Jimzon Trangia</h4>
+                    </div>
+                </div>
 
-  <!-- glow -->
-  <div class="absolute left-0 top-10 w-[400px] h-[400px] bg-blue-100/20 blur-3xl rounded-full"></div>
+                <div class="absolute -top-6 -right-6 bg-[#0F172A] p-8 rounded-[2.5rem] shadow-2xl z-20 border border-white/5 animate-float">
+                    <p class="text-[#FACC15] text-4xl font-black leading-none italic">10+</p>
+                    <p class="text-white/60 text-[9px] font-black uppercase tracking-widest mt-2 leading-tight">Years Professional <br> Mentorship</p>
+                </div>
+            </div>
 
-  <div class="relative max-w-5xl mx-auto px-6">
+            <div class="lg:col-span-7" data-aos="fade-left">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="h-[2px] w-12 bg-[#1D4ED8]"></span>
+                    <span class="text-[#1D4ED8] text-[11px] font-black uppercase tracking-[0.5em]">The Story Behind the Master</span>
+                </div>
 
-    <!-- heading -->
-    <div class="text-center mb-16">
-      <p class="text-[#FACC15] font-semibold tracking-widest uppercase text-sm mb-3">
-        FAQ
-      </p>
+                <h3 class="text-5xl md:text-7xl text-[#0F172A] mb-10 uppercase font-black leading-[0.95] tracking-tighter">
+                    Meet Your <br> 
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800 italic font-black">Chess Mentor.</span>
+                </h3>
 
-      <h3 class="text-4xl font-bold text-[#0F172A]">
-        Frequently Asked Questions
-      </h3>
+                <div class="space-y-6 text-gray-600 font-medium text-lg leading-relaxed mb-12 max-w-2xl">
+                    <p>
+                        As an <span class="text-[#0F172A] font-black italic">Arena Grandmaster (AGM)</span>, I have spent over a decade refining the intersection of tactical precision and high-level strategy. My expertise is anchored by an elite <span class="text-[#1D4ED8] font-bold">2200+ National Rating</span>, a recognized <span class="text-[#0F172A] font-bold">2100+ FIDE Standard</span> marker, and a consistent <span class="text-[#0F172A] font-black underline decoration-blue-100 decoration-4 underline-offset-4">2500+ peak performance</span> across major online platforms.
+                    </p>
+                    <p>
+                        But my greatest achievement lies in the growth of my students. For more than <span class="text-[#0F172A] font-bold">10 years</span>, I’ve guided players of all ages—from kids to adults—to bridge massive rating plateaus, with many achieving <span class="text-[#0F172A] font-bold italic">1,000+ points of growth in a single year</span> and securing victory in local and national circuits.
+                    </p>
+                    <p>
+                        My coaching goes beyond standard theory. I focus on building a personalized roadmap tailored to your unique personality, serving as both a <span class="text-[#1D4ED8] font-bold">strategic mentor and a dedicated partner</span> on your ultimate journey toward chess mastery.
+                    </p>
+                </div>
 
-      <p class="text-gray-500 mt-4 max-w-2xl mx-auto">
-        Everything you need to know before booking your first lesson.
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12">
+                    <div class="p-5 bg-[#F8FAFC] rounded-3xl border border-gray-100">
+                        <p class="text-xl font-black text-[#0F172A] italic leading-none">2200+</p>
+                        <p class="text-gray-400 text-[7px] font-black uppercase tracking-widest mt-2">National <br> Rating</p>
+                    </div>
+                    <div class="p-5 bg-[#F8FAFC] rounded-3xl border border-gray-100">
+                        <p class="text-xl font-black text-[#1D4ED8] italic leading-none">2100+</p>
+                        <p class="text-gray-400 text-[7px] font-black uppercase tracking-widest mt-2">FIDE <br> Standard</p>
+                    </div>
+                    <div class="p-5 bg-[#F8FAFC] rounded-3xl border border-gray-100">
+                        <p class="text-xl font-black text-[#0F172A] italic leading-none">2500+</p>
+                        <p class="text-gray-400 text-[7px] font-black uppercase tracking-widest mt-2">Peak Online <br> Performance</p>
+                    </div>
+                    <div class="p-5 bg-[#F8FAFC] rounded-3xl border border-gray-100">
+                        <p class="text-xl font-black text-[#FACC15] italic leading-none">1000+</p>
+                        <p class="text-gray-400 text-[7px] font-black uppercase tracking-widest mt-2">Points Student <br> Growth</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-8 pt-10 border-t border-gray-100">
+                    <a href="https://cal.com/coachjimzon/trial-class-with-coach-jimzon" target="_blank" 
+                       class="bg-[#1D4ED8] text-white px-12 py-5 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-blue-700 transition-all shadow-xl shadow-blue-200">
+                        Start Your Adventure →
+                    </a>
+                    <div class="flex flex-col">
+                        <span class="text-[#0F172A] font-black text-xs uppercase tracking-tighter italic leading-none">Accepting Students</span>
+                        <span class="text-gray-400 text-[9px] font-bold uppercase tracking-[0.2em] mt-2 italic">Global 1-on-1 Mentorship</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="how-it-works" class="py-32 bg-[#F8FAFC]">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <h3 class="premium-headline text-4xl md:text-5xl text-[#0F172A] mb-20" data-aos="fade-up">Simple 3-Step Process</h3>
+        <div class="grid md:grid-cols-3 gap-16">
+            <div data-aos="fade-up" data-aos-delay="100"><div class="text-6xl mb-8">📅</div><h4 class="text-xl font-black mb-4">Book a Lesson</h4><p class="text-gray-500 text-sm font-medium">Choose your preferred schedule and reserve your coaching session online instantly.</p></div>
+            <div data-aos="fade-up" data-aos-delay="200"><div class="text-6xl mb-8 text-[#FACC15]">♟️</div><h4 class="text-xl font-black mb-4">Get Your Plan</h4><p class="text-gray-500 text-sm font-medium">Receive personalized training and a roadmap tailored to your current level and goals.</p></div>
+            <div data-aos="fade-up" data-aos-delay="300"><div class="text-6xl mb-8">🚀</div><h4 class="text-xl font-black mb-4">Improve Faster</h4><p class="text-gray-500 text-sm font-medium">Gain confidence, boost your rating, and start winning more tournament games.</p></div>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials" class="py-24 md:py-32 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 md:px-10 relative z-10">
+    
+    <div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-20 gap-8 text-center md:text-left">
+      <div data-aos="fade-right">
+        <span class="text-[#1D4ED8] font-black text-[10px] uppercase tracking-[0.4em] mb-4 block">Success Stories</span>
+        <h3 class="premium-headline text-4xl md:text-6xl text-[#0F172A] uppercase">Wall of Fame</h3>
+      </div>
+      <p class="text-gray-500 max-w-xs text-lg font-medium leading-relaxed" data-aos="fade-left">
+        Real rating gains from students across 20+ countries worldwide.
       </p>
     </div>
 
-    <!-- accordion -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <div class="card-premium p-10 rounded-[3rem] border border-gray-50" data-aos="fade-up">
+        <div class="flex justify-between items-center mb-8">
+          <div class="text-[#FACC15] flex gap-1 text-xs">★★★★★</div>
+          <span class="bg-blue-50 text-[#1D4ED8] text-[10px] font-black px-4 py-1.5 rounded-full uppercase">+900 Gain</span>
+        </div>
+        <p class="text-[#0F172A] text-lg leading-relaxed mb-10 font-medium italic">"Improved from <span class="text-[#1D4ED8] font-black underline decoration-blue-100">600 to 1500</span> in 1 year. Coach Jimzon changed my thinking."</p>
+        <div class="flex items-center gap-4 border-t border-gray-50 pt-8">
+          <div class="w-14 h-14 rounded-2xl overflow-hidden bg-gray-100"><img src="images/student1.jpg" alt="" class="w-full h-full object-cover"></div>
+          <div><p class="font-black text-sm uppercase">Iñigo D.</p><p class="text-[10px] text-gray-400 font-black uppercase tracking-widest">🇵🇭 PH Student</p></div>
+        </div>
+      </div>
+
+      <div class="bg-[#0F172A] p-10 rounded-[3rem] shadow-2xl text-white lg:translate-y-8" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex justify-between items-center mb-8">
+          <div class="text-[#FACC15] flex gap-1 text-xs">★★★★★</div>
+          <span class="bg-white/10 text-[#FACC15] text-[10px] font-black px-4 py-1.5 rounded-full uppercase">Champion</span>
+        </div>
+        <p class="text-gray-200 text-lg leading-relaxed mb-10 font-medium italic">"Gained <span class="text-[#FACC15] font-black underline decoration-white/20">500+ points</span> in 3 months and won a tournament! I beat players I used to lose to."</p>
+        <div class="flex items-center gap-4 border-t border-white/5 pt-8">
+          <div class="w-14 h-14 rounded-2xl overflow-hidden bg-white/10"><img src="images/student2.png" alt="" class="w-full h-full object-cover"></div>
+          <div><p class="font-black text-sm uppercase">Jayden H.</p><p class="text-[10px] text-gray-400 font-black uppercase tracking-widest">🇺🇸 Junior Student</p></div>
+        </div>
+      </div>
+
+      <div class="card-premium p-10 rounded-[3rem] border border-gray-50" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex justify-between items-center mb-8">
+          <div class="text-[#FACC15] flex gap-1 text-xs">★★★★★</div>
+          <span class="bg-blue-50 text-[#1D4ED8] text-[10px] font-black px-4 py-1.5 rounded-full uppercase">Confidence</span>
+        </div>
+        <p class="text-[#0F172A] text-lg leading-relaxed mb-10 font-medium italic">"I was stuck for a long time, but Coach helped me understand the game on a <span class="text-[#1D4ED8] font-black">deeper level</span>."</p>
+        <div class="flex items-center gap-4 border-t border-gray-50 pt-8">
+          <div class="w-14 h-14 rounded-2xl overflow-hidden bg-gray-100"><img src="images/student6.jpg" alt="" class="w-full h-full object-cover"></div>
+          <div><p class="font-black text-sm uppercase text-[#0F172A]">Everette F.</p><p class="text-[10px] text-gray-400 font-black uppercase tracking-widest">🇺🇸 Adult Learner</p></div>
+        </div>
+      </div>
+
+      <div class="card-premium p-10 rounded-[3rem] border border-gray-50" data-aos="fade-up">
+        <div class="flex justify-between items-center mb-8">
+          <div class="text-[#FACC15] flex gap-1 text-xs">★★★★★</div>
+          <span class="bg-blue-50 text-[#1D4ED8] text-[10px] font-black px-4 py-1.5 rounded-full uppercase">Beginner</span>
+        </div>
+        <p class="text-[#0F172A] text-lg leading-relaxed mb-10 font-medium italic">"The lessons are <span class="text-[#1D4ED8] font-black">fun and practical</span>. Best coach for those starting their journey."</p>
+        <div class="flex items-center gap-4 border-t border-gray-50 pt-8">
+          <div class="w-14 h-14 rounded-2xl overflow-hidden bg-gray-100"><img src="images/student3.png" alt="" class="w-full h-full object-cover"></div>
+          <div><p class="font-black text-sm uppercase text-[#0F172A]">Noah L.</p><p class="text-[10px] text-gray-400 font-black uppercase tracking-widest">🇦🇺 Beginner Student</p></div>
+        </div>
+      </div>
+
+      <div class="bg-[#1D4ED8] p-10 rounded-[3rem] shadow-xl text-white lg:translate-y-8" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex justify-between items-center mb-8">
+          <div class="text-[#FACC15] flex gap-1 text-xs">★★★★★</div>
+          <span class="bg-white/20 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">Regional Rep</span>
+        </div>
+        <p class="text-white text-lg leading-relaxed mb-10 font-medium italic">"Winning school competitions and representing my <span class="text-[#FACC15] font-black">province</span> in women's events now!"</p>
+        <div class="flex items-center gap-4 border-t border-white/10 pt-8">
+          <div class="w-14 h-14 rounded-2xl overflow-hidden bg-white/20"><img src="images/student5.jpg" alt="" class="w-full h-full object-cover"></div>
+          <div><p class="font-black text-sm uppercase">Gleam A.</p><p class="text-[10px] text-blue-200 font-black uppercase tracking-widest">🇵🇭 Junior Player</p></div>
+        </div>
+      </div>
+
+      <div class="card-premium p-10 rounded-[3rem] border border-gray-50" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex justify-between items-center mb-8">
+          <div class="text-[#FACC15] flex gap-1 text-xs">★★★★★</div>
+          <span class="bg-blue-50 text-[#1D4ED8] text-[10px] font-black px-4 py-1.5 rounded-full uppercase">Pro Repertoire</span>
+        </div>
+        <p class="text-[#0F172A] text-lg leading-relaxed mb-10 font-medium italic">"Coach Jimzon helped me prepare for <span class="text-[#1D4ED8] font-black">tournaments</span> and improved my confidence."</p>
+        <div class="flex items-center gap-4 border-t border-gray-50 pt-8">
+          <div class="w-14 h-14 rounded-2xl overflow-hidden bg-gray-100"><img src="images/student4.jpg" alt="" class="w-full h-full object-cover"></div>
+          <div><p class="font-black text-sm uppercase text-[#0F172A]">Loriefe V.</p><p class="text-[10px] text-gray-400 font-black uppercase tracking-widest">🇪🇸 Tournament Player</p></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="py-32 bg-[#FBFDFF] relative overflow-hidden">
+  <div class="max-w-4xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-24" data-aos="fade-up">
+      <span class="text-[#1D4ED8] font-black text-[10px] uppercase tracking-[0.4em] mb-4 block">Common Inquiries</span>
+      <h3 class="premium-headline text-4xl md:text-5xl text-[#0F172A] uppercase">Frequently Asked Questions</h3>
+    </div>
+
     <div class="space-y-4">
-
-      <!-- item -->
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-        <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center p-6 text-left font-semibold text-[#0F172A]">
-          How are lessons conducted?
-          <span class="text-2xl">+</span>
+      <div class="group bg-white rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-md transition-all overflow-hidden" data-aos="fade-up">
+        <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center p-8 text-left">
+          <span class="font-black text-[#0F172A] md:text-lg group-hover:text-[#1D4ED8] transition-colors">How are lessons conducted?</span>
+          <span class="faq-icon text-2xl text-gray-300 group-hover:text-[#1D4ED8]">+</span>
         </button>
-        <div class="hidden px-6 pb-6 text-gray-500">
-          Lessons are conducted online via Zoom, Google Meet, or your preferred platform, with interactive board analysis and personalized training.
+        <div class="faq-answer hidden px-8 pb-8 text-gray-500 font-medium text-sm md:text-base border-t border-gray-50 pt-6 leading-relaxed">
+          Lessons are conducted online via <span class="font-bold text-[#0F172A]">Zoom or Google Meet</span>. We use high-quality interactive boards (Lichess or Chess.com) where both of us can move pieces in real-time. Everything we discuss is saved so you can review the games later.
         </div>
       </div>
 
-      <!-- item -->
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-        <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center p-6 text-left font-semibold text-[#0F172A]">
-          What level of players do you coach?
-          <span class="text-2xl">+</span>
+      <div class="group bg-white rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-md transition-all overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center p-8 text-left">
+          <span class="font-black text-[#0F172A] md:text-lg group-hover:text-[#1D4ED8] transition-colors">What level of players do you coach?</span>
+          <span class="faq-icon text-2xl text-gray-300 group-hover:text-[#1D4ED8]">+</span>
         </button>
-        <div class="hidden px-6 pb-6 text-gray-500">
-          I coach beginners, intermediate players, tournament competitors, and adult learners looking to improve quickly.
+        <div class="faq-answer hidden px-8 pb-8 text-gray-500 font-medium text-sm md:text-base border-t border-gray-50 pt-6 leading-relaxed">
+          I coach a wide range of students: 
+          <ul class="list-disc ml-5 mt-3 space-y-1">
+            <li><span class="font-bold text-[#0F172A]">Beginners:</span> Learning fundamentals and basic tactics.</li>
+            <li><span class="font-bold text-[#0F172A]">Intermediate:</span> Improving strategy, opening repertoires, and endgames.</li>
+            <li><span class="font-bold text-[#0F172A]">Tournament Players:</span> Specialized preparation for competitive events.</li>
+            <li><span class="font-bold text-[#0F172A]">Adult Learners:</span> Busy professionals looking to gain rating efficiently.</li>
+          </ul>
         </div>
       </div>
 
-      <!-- item -->
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-        <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center p-6 text-left font-semibold text-[#0F172A]">
-          How much does coaching cost?
-          <span class="text-2xl">+</span>
+      <div class="group bg-white rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+        <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center p-8 text-left">
+          <span class="font-black text-[#0F172A] md:text-lg group-hover:text-[#1D4ED8] transition-colors">How much does coaching cost?</span>
+          <span class="faq-icon text-2xl text-gray-300 group-hover:text-[#1D4ED8]">+</span>
         </button>
-        <div class="hidden px-6 pb-6 text-gray-500">
-          Lessons start at 
-          <span class="font-semibold text-[#0F172A]">₱800 per session</span>, 
-          or as low as 
-          <span class="font-semibold text-[#1D4ED8]">₱650 per session</span> 
-          when you book a 10-session coaching program.
+        <div class="faq-answer hidden px-8 pb-8 text-gray-500 font-medium text-sm md:text-base border-t border-gray-50 pt-6 leading-relaxed">
+          Single sessions are priced at <span class="font-bold text-[#0F172A]">₱800</span>. However, for committed students, I offer a <span class="font-bold text-[#1D4ED8]">10-session package for only ₱6,500</span> (savings of ₱1,500). This package includes a personalized 3-month training roadmap.
         </div>
       </div>
 
-      <!-- item -->
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-        <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center p-6 text-left font-semibold text-[#0F172A]">
-          Do you coach kids and adults?
-          <span class="text-2xl">+</span>
+      <div class="group bg-white rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+        <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center p-8 text-left">
+          <span class="font-black text-[#0F172A] md:text-lg group-hover:text-[#1D4ED8] transition-colors">Do you coach both kids and adults?</span>
+          <span class="faq-icon text-2xl text-gray-300 group-hover:text-[#1D4ED8]">+</span>
         </button>
-        <div class="hidden px-6 pb-6 text-gray-500">
-          Yes! I have experience coaching both kids and adults from different countries and skill levels.
+        <div class="faq-answer hidden px-8 pb-8 text-gray-500 font-medium text-sm md:text-base border-t border-gray-50 pt-6 leading-relaxed">
+          Yes! I have extensive experience teaching kids (starting age 6+) where the focus is on fun and cognitive development, as well as adults who want a more serious, results-driven analytical approach.
         </div>
       </div>
 
-      <!-- item -->
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-        <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center p-6 text-left font-semibold text-[#0F172A]">
-          Can I book a trial lesson first?
-          <span class="text-2xl">+</span>
+      <div class="group bg-white rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+        <button onclick="toggleFAQ(this)" class="w-full flex justify-between items-center p-8 text-left">
+          <span class="font-black text-[#0F172A] md:text-lg group-hover:text-[#1D4ED8] transition-colors">Can I book a trial lesson first?</span>
+          <span class="faq-icon text-2xl text-gray-300 group-hover:text-[#1D4ED8]">+</span>
         </button>
-        <div class="hidden px-6 pb-6 text-gray-500">
-          Absolutely! You can start with a single lesson before committing to a package.
+        <div class="faq-answer hidden px-8 pb-8 text-gray-500 font-medium text-sm md:text-base border-t border-gray-50 pt-6 leading-relaxed">
+          Definitely. I recommend booking a single trial session first so we can assess your current strength, identify your "bottlenecks," and see if my coaching style is the right fit for your journey.
         </div>
       </div>
-
     </div>
 
+    <div class="mt-16 text-center" data-aos="fade-up">
+        <p class="text-gray-400 text-sm font-medium">Still have questions? 
+            <a href="mailto:coachjimzon@gmail.com" class="text-[#1D4ED8] font-black border-b-2 border-blue-100 pb-0.5 ml-1 hover:text-blue-800 transition">Email me directly</a>
+        </p>
+    </div>
   </div>
 </section>
 
+<section class="py-32 px-6 bg-[#FBFDFF] overflow-hidden">
+    <div class="max-w-7xl mx-auto relative">
+        
+        <div class="absolute -top-10 left-0 text-[12px] font-black text-gray-200 uppercase tracking-[2em] select-none pointer-events-none hidden lg:block uppercase">
+            A B C D E F G H
+        </div>
 
+        <div class="relative z-10 bg-[#0F172A] rounded-[4rem] shadow-[0_60px_100px_-20px_rgba(15,23,42,0.4)] flex flex-col lg:flex-row items-center overflow-hidden border border-white/5">
+            
+            <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-blue-600/10 via-transparent to-yellow-500/5 pointer-events-none"></div>
 
-<!-- FINAL CTA -->
-<section class="relative py-24 text-white">
-  <div class="absolute inset-0">
-    <img src="images/chess-bg.png" class="w-full h-full object-cover">
-    <div class="absolute inset-0 bg-[#0F172A]/90"></div>
-  </div>
+            <div class="lg:w-2/5 h-full relative p-12 lg:p-20 flex justify-center items-center">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-[#1D4ED8] blur-[80px] opacity-20 rounded-full"></div>
+                    <div class="text-[15rem] md:text-[20rem] leading-none select-none drop-shadow-2xl opacity-10 italic font-black text-white uppercase">
+                        AGM
+                    </div>
+                </div>
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/5 backdrop-blur-2xl border border-white/10 p-8 rounded-[2.5rem] shadow-2xl text-center transform -rotate-3 transition-transform duration-500">
+                    <p class="text-[#FACC15] text-4xl font-black tracking-tighter uppercase">AGM</p>
+                    <p class="text-white text-[10px] font-black uppercase tracking-[0.3em] mt-1">Verified Coach</p>
+                </div>
+            </div>
 
-  <div class="relative max-w-4xl mx-auto text-center px-6">
-    <h3 class="text-4xl font-bold mb-6">
-      Ready to Improve Faster?
-    </h3>
+            <div class="lg:w-3/5 p-10 md:p-20 text-center lg:text-left relative z-20">
+                <div class="flex flex-wrap items-center gap-4 mb-8 justify-center lg:justify-start">
+                    
+                    <div class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full">
+                        <span class="text-blue-400 text-[10px] font-black uppercase tracking-[0.2em]">Limited Availability</span>
+                    </div>
 
-    <p class="text-gray-300 mb-8">
-      Join students worldwide improving with structured coaching.
-    </p>
+                    <span class="w-1 h-1 bg-white/20 rounded-full"></span>
 
-    <a href="https://cal.com/coachjimzon/trial-class-with-coach-jimzon" target="_blank">
-      <button class="bg-[#FACC15] text-black px-8 py-4 rounded-full font-semibold hover:scale-105 transition">
-        Start Your First Lesson →
-      </button>
-    </a>
-  </div>
+                    <div class="flex items-center gap-2 bg-red-500/10 border border-red-500/20 px-4 py-1.5 rounded-full">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                        </span>
+                        <span class="text-red-400 text-[10px] font-black uppercase tracking-[0.2em]">Only 3 Slots Left for May</span>
+                    </div>
+                </div>
+
+                <h3 class="premium-headline text-5xl md:text-8xl text-white mb-8 uppercase leading-[0.9] tracking-tighter">
+                    Ready to Win <br> 
+                    <span class="text-[#FACC15]">More Games?</span>
+                </h3>
+
+                <p class="text-blue-100/60 mb-12 max-w-xl font-medium text-lg md:text-xl leading-relaxed">
+                    Stop hitting plateaus. Master the board with a personalized roadmap designed by an Arena Grandmaster. Your next rating peak is just one session away.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center gap-8 justify-center lg:justify-start">
+                    <a href="https://cal.com/coachjimzon/trial-class-with-coach-jimzon" target="_blank" 
+                       class="group relative bg-[#1D4ED8] text-white px-12 py-6 rounded-2xl font-black text-xl md:text-2xl hover:scale-105 transition-all shadow-xl shadow-blue-900/40 overflow-hidden">
+                        <span class="relative z-10">Book Trial Lesson →</span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </a>
+                    
+                    <div class="flex flex-col items-center lg:items-start gap-2">
+                        <div class="flex -space-x-2">
+                            <div class="w-7 h-7 rounded-full border-2 border-[#0F172A] bg-gray-600 flex items-center justify-center text-[8px]">♟️</div>
+                            <div class="w-7 h-7 rounded-full border-2 border-[#0F172A] bg-gray-700"></div>
+                            <div class="w-7 h-7 rounded-full border-2 border-[#0F172A] bg-gray-800"></div>
+                        </div>
+                        <span class="text-white/30 text-[9px] font-black uppercase tracking-[0.2em]">Filling fast</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- FOOTER -->
-<footer id="contact" class="bg-[#0F172A] text-white py-16">
-
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
-
-    <!-- BRAND -->
-    <div>
-      <h4 class="text-2xl font-bold mb-4">
-        <span class="text-[#1D4ED8]">COACH</span><span class="text-[#FACC15]">JIMZON</span>
-      </h4>
-
-      <p class="text-gray-400 leading-relaxed">
-        Improve faster and play smarter with professional online chess coaching.
-      </p>
-    </div>
-
-    <!-- QUICK LINKS -->
-    <div>
-      <h5 class="font-semibold text-lg mb-4">Quick Links</h5>
-      <ul class="space-y-2 text-gray-400">
-        <li><a href="#" class="hover:text-[#FACC15] transition">Home</a></li>
-        <li><a href="#about" class="hover:text-[#FACC15] transition">About</a></li>
-        <li><a href="#testimonials" class="hover:text-[#FACC15] transition">Testimonials</a></li>
-        <li><a href="booking.html" class="hover:text-[#FACC15] transition">Book a Lesson</a></li>
-      </ul>
-    </div>
-
-    <!-- CONTACT -->
-    <div>
-      <h5 class="font-semibold text-lg mb-4">Contact</h5>
-      <ul class="space-y-2 text-gray-400">
-        <li>Email: coachjimzon@gmail.com</li>
-        <li>Facebook: Coach Jimzon</li>
-        <li>Available Worldwide 🌍</li>
-      </ul>
-    </div>
-
-    <!-- SOCIAL -->
-    <div>
-      <h5 class="font-semibold text-lg mb-4">Follow Me</h5>
-
-      <div class="flex gap-4 flex-wrap">
-
-        <!-- Facebook -->
-        <a href="https://www.facebook.com/coachjimzon" target="_blank">
-          <img src="images/facebook.png" class="w-6 h-6 hover:scale-110 hover:opacity-80 transition">
-        </a>
-
-        <!-- Instagram -->
-        <a href="https://instagram.com/yourprofile" target="_blank">
-          <img src="images/instagram.webp" class="w-6 h-6 hover:scale-110 hover:opacity-80 transition">
-        </a>
-
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/jimzontrangia/" target="_blank">
-          <img src="images/linkedin.png" class="w-6 h-6 hover:scale-110 hover:opacity-80 transition">
-        </a>
-
-        <!-- Upwork -->
-        <a href="https://www.upwork.com/freelancers/~01e3e44de578a305a9" target="_blank">
-          <img src="images/upwork.svg" class="w-6 h-6 hover:scale-110 hover:opacity-80 transition">
-        </a>
-
-        <!-- Chess.com -->
-        <a href="https://www.chess.com/member/yourusername" target="_blank">
-          <img src="images/chess.com.webp" class="w-6 h-6 hover:scale-110 hover:opacity-80 transition">
-        </a>
-
-        <!-- Lichess -->
-        <a href="https://lichess.org/@/Davaochess" target="_blank">
-          <img src="images/lichess.png" class="w-6 h-6 hover:scale-110 hover:opacity-80 transition">
-        </a>
-
-        <!-- FIDE -->
-        <a href="https://ratings.fide.com/profile/yourid" target="_blank">
-          <img src="images/fide.png" class="w-6 h-6 hover:scale-110 hover:opacity-80 transition">
-        </a>
-
+<footer id="contact" class="bg-[#050A18] text-white pt-32 pb-12 overflow-hidden relative">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+      <div class="space-y-8">
+        <h4 class="text-2xl font-black tracking-tighter logo-font"><span class="text-[#1D4ED8]">COACH</span><span class="text-[#FACC15]">JIMZON</span></h4>
+        <p class="text-gray-400 text-sm leading-relaxed font-medium">Helping chess players worldwide bridge the gap between their current level and their ultimate potential.</p>
+      </div>
+      <div>
+        <h5 class="text-[11px] font-black uppercase tracking-[0.3em] text-[#FACC15] mb-8">Navigation</h5>
+        <ul class="space-y-4 text-sm font-bold text-gray-400">
+          <li><a href="#" class="hover:text-white transition">Home</a></li>
+          <li><a href="#about" class="hover:text-white transition">About Coach</a></li>
+          <li><a href="#coaching" class="hover:text-white transition">Programs</a></li>
+          <li><a href="#testimonials" class="hover:text-white transition">Success Stories</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-[11px] font-black uppercase tracking-[0.3em] text-[#FACC15] mb-8">Get In Touch</h5>
+        <ul class="space-y-4 text-sm font-bold text-gray-400">
+          <li class="flex items-start gap-3">📧 coachjimzon@gmail.com</li>
+          <li class="flex items-start gap-3">🌍 Available Worldwide <br><span class="text-[9px] opacity-40">English & Bisaya</span></li>
+          <li class="pt-4 italic text-xs text-blue-400 tracking-tight">"Your next rating peak is one session away."</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-[11px] font-black uppercase tracking-[0.3em] text-[#FACC15] mb-8">Social Ecosystem</h5>
+        <div class="grid grid-cols-4 gap-4">
+          <a href="https://www.facebook.com/coachjimzon" target="_blank" class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#1D4ED8] transition-all"><img src="images/facebook.png" class="w-5 invert"></a>
+          <a href="https://www.linkedin.com/in/jimzontrangia/" target="_blank" class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#1D4ED8] transition-all"><img src="images/linkedin.png" class="w-5 invert"></a>
+          <a href="https://lichess.org/@/Davaochess" target="_blank" class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#FACC15] transition-all"><img src="images/lichess.png" class="w-5"></a>
+          <a href="https://www.upwork.com/freelancers/~01e3e44de578a305a9" target="_blank" class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#6FDA44] transition-all"><img src="images/upwork.svg" class="w-5"></a>
+          <a href="https://www.chess.com/member/gmjimzon" target="_blank" class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#81B64C] transition-all"><img src="images/chess.com.webp" class="w-5"></a>
+          <a href="https://ratings.fide.com/profile/yourid" target="_blank" class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-gray-600 transition-all"><img src="images/fide.png" class="w-5"></a>
+          <a href="https://instagram.com/coachjimzon" target="_blank" class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-pink-600 transition-all"><img src="images/instagram.webp" class="w-5"></a>
+        </div>
       </div>
     </div>
-
+    <div class="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+      <p class="text-[10px] font-black text-gray-600 uppercase tracking-[0.6em]">© 2026 Jimzon Trangia. All Rights Reserved.</p>
+      <div class="flex gap-8 text-[10px] font-bold text-gray-600 uppercase tracking-widest">
+        <a href="#" class="hover:text-white transition">Privacy Policy</a><a href="#" class="hover:text-white transition">Terms of Service</a>
+      </div>
+    </div>
   </div>
-
-  <!-- bottom -->
-  <div class="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm">
-    © 2026 Coach Jimzon. All rights reserved.
-  </div>
-
 </footer>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true, offset: 100, duration: 800 });
+
+  function toggleFAQ(button) {
+    const answer = button.nextElementSibling;
+    const icon = button.querySelector('.faq-icon');
+    answer.classList.toggle('hidden');
+    const isHidden = answer.classList.contains('hidden');
+    icon.textContent = isHidden ? "+" : "−";
+    icon.style.transform = isHidden ? "rotate(0deg)" : "rotate(180deg)";
+  }
+
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('active');
+    mobileMenu.classList.toggle('translate-x-full');
+  });
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuBtn.classList.remove('active');
+      mobileMenu.classList.add('translate-x-full');
+    });
+  });
+</script>
 
 <script src="js/main.js"></script>
-
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -731,6 +570,7 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
-<!--End of Tawk.to Script-->
+
+
 </body>
 </html>
