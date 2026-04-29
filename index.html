@@ -45,6 +45,59 @@
     .card-premium { background: white; border: 1px solid rgba(0,0,0,0.05); transition: all 0.3s ease; }
     .card-premium:hover { transform: translateY(-10px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1); }
     .faq-icon { transition: transform 0.3s ease; }
+
+
+  
+    @keyframes hybrid-float {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-15px) rotate(1deg); }
+    }
+    .animate-hybrid-float {
+        animation: hybrid-float 7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    .glass-premium {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+    .btn-premium-glow {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  /* Ang subtle shine nga mo-agi sa button */
+  .btn-premium-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    transition: all 0.6s;
+    z-index: -1;
+  }
+
+  .btn-premium-glow:hover::before {
+    left: 100%;
+  }
+
+  .btn-premium-glow:hover {
+    box-shadow: 0 20px 40px -10px rgba(250, 204, 21, 0.5);
+    transform: translateY(-5px) scale(1.02);
+  }
   </style>
 </head>
 
@@ -93,22 +146,92 @@
     <img src="images/chess-bg.png" class="w-full h-full object-cover">
     <div class="absolute inset-0 hero-gradient"></div>
   </div>
+
   <div class="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center py-20">
-    <div data-aos="fade-right">
-      <span class="inline-block px-4 py-1 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6">Arena Grandmaster Instruction</span>
-      <h2 class="premium-headline text-5xl md:text-7xl text-white mb-6">Improve Faster.<br><span class="text-[#FACC15]">Play Smarter.</span></h2>
-      <p class="text-lg text-gray-300 mb-10 max-w-md leading-relaxed font-medium">Personalized chess coaching designed to help you gain rating and confidence through elite strategies.</p>
-      <a href="https://cal.com/coachjimzon/trial-class-with-coach-jimzon" target="_blank" class="bg-[#FACC15] text-black px-8 py-4 rounded-xl font-black text-lg hover:scale-105 transition shadow-xl shadow-yellow-500/20 inline-block">Book First Lesson</a>
-      <div class="border-l-4 border-[#1D4ED8] pl-6 mt-12">
-        <p class="text-[#FACC15] font-black text-xl uppercase tracking-tighter">AGM Jimzon Trangia</p>
-        <div class="flex flex-wrap gap-x-4 text-gray-400 text-[11px] font-bold uppercase mt-2 tracking-widest">
-            <span>♟️ 2500+ Online</span><span>🇵🇭 2200+ National</span><span>🌍 2100+ FIDE</span>
+    
+    <div data-aos="fade-right" class="relative z-20">
+    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8">
+        <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+        </span>
+        <span class="text-blue-400 text-[10px] font-black uppercase tracking-[0.4em]">Top Rated Instruction</span>
+    </div>
+
+    <h2 class="premium-headline text-6xl md:text-8xl text-white mb-8">
+        Mastery.<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FACC15] to-[#EAB308] italic">Simplified.</span>
+    </h2>
+
+    <p class="text-xl text-gray-400 mb-12 max-w-md leading-relaxed font-medium">
+        Professional chess mentorship for <span class="text-white">Kids, Teens, and Adults</span>. Bridging the gap between potential and peak performance.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center gap-8 mb-16">
+        <a href="https://cal.com/coachjimzon/trial-class-with-coach-jimzon" target="_blank" 
+           class="btn-premium-glow bg-gradient-to-r from-[#FACC15] to-[#EAB308] text-[#0F172A] px-10 py-5 rounded-2xl font-black text-xl uppercase tracking-tight flex items-center gap-4 shadow-2xl shadow-yellow-500/20 group">
+            <span>Book First Lesson</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+        </a>
+    </div>
+    
+    <div class="border-l-4 border-[#1D4ED8] pl-8 transition-all hover:border-[#FACC15]">
+        <p class="text-[#FACC15] font-black text-2xl uppercase tracking-tighter italic leading-none">AGM Jimzon Trangia</p>
+        <div class="flex flex-wrap gap-x-6 gap-y-3 text-gray-400 text-[12px] font-black uppercase mt-4 tracking-[0.2em]">
+            <span class="flex items-center gap-2 hover:text-white transition-colors cursor-default">
+                <span class="text-blue-500">♟</span> 2500+ Online
+            </span>
+            <span class="flex items-center gap-2 hover:text-white transition-colors cursor-default">
+                <span class="text-blue-500">🇵🇭</span> 2200+ National
+            </span>
+            <span class="flex items-center gap-2 hover:text-white transition-colors cursor-default">
+                <span class="text-blue-500">🌍</span> 2100+ FIDE
+            </span>
         </div>
-      </div>
     </div>
-    <div class="relative" data-aos="zoom-in">
-      <img src="images/hero-img.png" class="w-full max-w-lg mx-auto animate-float drop-shadow-2xl">
+</div>
+
+  <div class="relative flex justify-center items-center py-10 md:py-0" data-aos="zoom-in">
+    
+    <div class="absolute inset-0 bg-blue-600/10 blur-[120px] rounded-full scale-75"></div>
+    
+    <div class="relative z-10 group">
+        <img src="images/hero-img.png" class="relative z-10 w-full max-w-[280px] md:max-w-lg mx-auto drop-shadow-2xl">
+
+        <div class="absolute -top-12 -right-2 md:-top-16 md:-right-8 z-20 animate-hybrid-float">
+            <div class="glass-premium p-3 md:p-5 rounded-[1.5rem] md:rounded-[2.5rem] flex items-center gap-3 md:gap-4 border-t-2 border-t-[#FACC15]/30">
+                <span class="text-xl md:text-3xl">🏆</span>
+                <div class="flex flex-col leading-none">
+                    <span class="text-[#FACC15] text-lg md:text-2xl font-black italic">10+</span>
+                    <span class="text-white/40 text-[6px] md:text-[8px] font-black uppercase tracking-widest mt-1">Years Exp.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 -left-12 md:-bottom-8 md:-left-16 z-20 animate-hybrid-float" style="animation-delay: -3.5s;">
+            <div class="glass-premium p-3 md:p-5 rounded-[1.5rem] md:rounded-[3rem] flex items-center gap-3 md:gap-5 border-b-2 border-b-blue-500/30">
+                <div class="flex -space-x-2 md:-space-x-3">
+                    <div class="w-7 h-7 md:w-10 md:h-10 rounded-full border-2 border-[#0F172A] bg-yellow-500 flex items-center justify-center text-[10px] md:text-sm">🧒</div>
+                    <div class="w-7 h-7 md:w-10 md:h-10 rounded-full border-2 border-[#0F172A] bg-blue-600 flex items-center justify-center text-[10px] md:text-sm">👨‍💼</div>
+                </div>
+                <div class="leading-none text-left">
+                    <p class="text-white font-black text-sm md:text-xl tracking-tighter">100+ Students</p>
+                    <p class="text-blue-300 text-[6px] md:text-[8px] font-black uppercase tracking-widest mt-1">Kids, Teens & Adults</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute -bottom-6 right-0 md:-bottom-10 md:right-4 z-20">
+            <div class="bg-[#111827]/60 backdrop-blur-md px-4 py-2 md:px-6 md:py-2.5 rounded-full border border-white/10 shadow-2xl">
+                <p class="text-white font-black text-[7px] md:text-[9px] uppercase tracking-[0.3em] flex items-center gap-2">
+                    <span class="text-[#FACC15]">★</span> Mentoring All Skill Levels
+                </p>
+            </div>
+        </div>
     </div>
+</div>
   </div>
 </section>
 
@@ -187,7 +310,7 @@
 
                 <div class="space-y-6 text-gray-400 font-medium text-lg leading-relaxed mb-12 max-w-2xl">
                     <p>
-                        As an <span class="text-white font-black italic">Arena Grandmaster (AGM)</span>, I have spent over a decade refining the intersection of tactical precision and high-level strategy. My expertise is anchored by an elite <span class="text-[#3B82F6] font-bold">2200+ National Rating</span>, a recognized <span class="text-white font-bold">2100+ FIDE Standard</span> marker, and a consistent <span class="text-white font-black underline decoration-blue-500/30 decoration-4 underline-offset-4">2500+ peak performance</span> across major online platforms.
+                        As an <span class="text-white font-black italic">Arena Grandmaster (AGM)</span>, I have spent over a decade refining the intersection of tactical precision and high-level strategy. My expertise is anchored by an elite] <span class="text-[#3B82F6] font-bold">2200+ National Rating</span>, a recognized <span class="text-white font-bold">2100+ FIDE Standard</span> marker, and a consistent <span class="text-white font-black underline decoration-blue-500/30 decoration-4 underline-offset-4">2500+ peak performance</span> across major online platforms.
                     </p>
                     <p>
                         But my greatest achievement lies in the growth of my students. For more than <span class="text-white font-bold">10 years</span>, I’ve guided players of all ages to bridge massive rating plateaus, with many achieving <span class="text-[#FACC15] font-bold italic text-xl">1,000+ points of growth</span> in a single year.
@@ -503,7 +626,7 @@
         </ul>
       </div>
       <div>
-        <h5 class="text-[11px] font-black uppercase tracking-[0.3em] text-[#FACC15] mb-8">Social Ecosystem</h5>
+        <h5 class="text-[11px] font-black uppercase tracking-[0.3em] text-[#FACC15] mb-8">Follow Me</h5>
         <div class="grid grid-cols-4 gap-4">
           <a href="https://www.facebook.com/coachjimzon" target="_blank" class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#1D4ED8] transition-all"><img src="images/facebook.png" class="w-5 invert"></a>
           <a href="https://www.linkedin.com/in/jimzontrangia/" target="_blank" class="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#1D4ED8] transition-all"><img src="images/linkedin.png" class="w-5 invert"></a>
