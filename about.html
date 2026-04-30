@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About AGM Jimzon Trangia | Chess Mentor</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700;800&display=swap');
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #020617; 
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .text-gradient {
+            background: linear-gradient(to bottom, #ffffff 40%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .premium-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .premium-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        .trophy-timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, #3B82F6, transparent);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <nav class="fixed w-full z-[100] py-6 px-6 md:px-10 bg-[#020617]/90 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-xl md:text-2xl font-black tracking-tighter uppercase italic">
+                <span class="text-white">COACH</span><span class="text-[#FACC15]">JIMZON</span>
+            </a>
+            <div class="flex items-center gap-6">
+                <a href="index.html" class="text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-white transition">Home</a>
+                <a href="results.html" class="bg-blue-600 hover:bg-[#FACC15] text-white hover:text-black px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all">Results</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-48 pb-32 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div data-aos="fade-right">
+                <span class="text-[#FACC15] text-[10px] font-black uppercase tracking-[0.6em] mb-8 block">Arena Grandmaster</span>
+                <h1 class="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none text-gradient mb-10">
+                    Precision. <br> Strategy. <br> <span class="italic text-blue-500">Mastery.</span>
+                </h1>
+                <p class="text-gray-400 text-xl font-medium leading-relaxed italic border-l-4 border-blue-600 pl-8 mb-10">
+                    "My mission is to simplify the complexities of high-level chess into actionable roadmaps for the next generation of players."
+                </p>
+            </div>
+            
+            <div class="relative" data-aos="zoom-in">
+                <div class="aspect-[4/5] rounded-[3.5rem] overflow-hidden border border-white/10 shadow-2xl relative z-10 bg-[#0f172a]">
+                    <img src="images/about.png" alt="Coach Jimzon Trangia" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-10 -left-10 bg-blue-600 p-10 rounded-[2.5rem] shadow-2xl z-20 animate-float border-8 border-[#020617]">
+                    <p class="text-4xl font-black">10+</p>
+                    <p class="text-[10px] font-bold uppercase tracking-widest opacity-80 leading-tight">Years Professional <br> Mentorship</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 px-6 bg-[#010413]">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="premium-card p-10 rounded-[2.5rem] text-center" data-aos="fade-up">
+                <p class="text-gray-500 text-[10px] font-black uppercase tracking-widest mb-4">National Rating</p>
+                <h3 class="text-4xl font-black">2200+</h3>
+            </div>
+            <div class="premium-card p-10 rounded-[2.5rem] text-center" data-aos="fade-up" data-aos-delay="100">
+                <p class="text-gray-500 text-[10px] font-black uppercase tracking-widest mb-4">FIDE Rating</p>
+                <h3 class="text-4xl font-black text-blue-500">2100+</h3>
+            </div>
+            <div class="premium-card p-10 rounded-[2.5rem] text-center" data-aos="fade-up" data-aos-delay="200">
+                <p class="text-gray-500 text-[10px] font-black uppercase tracking-widest mb-4">Online Peak</p>
+                <h3 class="text-4xl font-black text-[#FACC15]">2500+</h3>
+            </div>
+            <div class="premium-card p-10 rounded-[2.5rem] text-center" data-aos="fade-up" data-aos-delay="300">
+                <p class="text-gray-500 text-[10px] font-black uppercase tracking-widest mb-4">Student Gain</p>
+                <h3 class="text-4xl font-black italic">1000+</h3>
+            </div>
+        </div>
+    </section>
+<!-- THE MASTER'S BLUEPRINT: CHESS-CENTRIC VERSION -->
+<section class="py-40 px-6 bg-[#020617] relative">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+            <div class="max-w-2xl" data-aos="fade-right">
+                <span class="text-blue-500 text-[10px] font-black uppercase tracking-[0.6em] mb-4 block">My Coaching Philosophy</span>
+                <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none text-white">The Master's <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FACC15] to-yellow-600 italic">Blueprint.</span></h2>
+            </div>
+            <p class="text-gray-400 max-w-sm text-lg font-medium italic border-l border-blue-600 pl-6" data-aos="fade-left">
+                "From varsity dominance to achieving the AGM title, these six pillars represent the exact training methodology I use to master the board."
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- PILLAR 01: TACTICS & CALCULATION (THE "WHAT") -->
+            <div class="premium-card p-12 rounded-[3rem] relative overflow-hidden group" data-aos="fade-up">
+                <div class="absolute -top-10 -right-10 text-9xl font-black text-white/[0.03] group-hover:text-blue-500/10 transition-colors">01</div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 bg-blue-600/20 rounded-2xl flex items-center justify-center border border-blue-500/30 mb-8 transition-transform group-hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase mb-4 italic text-white">Tactical Pattern Recognition</h4>
+                    <p class="text-gray-400 leading-relaxed font-medium">
+                        Master the "What" of the position. We sharpen your ability to spot forks, pins, and skewers instantly, focusing on a **"Keep Punching"** approach where creating constant threats is the priority.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PILLAR 02: STRATEGY & EVALUATION (THE "WHY") -->
+            <div class="premium-card p-12 rounded-[3rem] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                <div class="absolute -top-10 -right-10 text-9xl font-black text-white/[0.03] group-hover:text-[#FACC15]/10 transition-colors">02</div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 bg-[#FACC15]/20 rounded-2xl flex items-center justify-center border border-[#FACC15]/30 mb-8 transition-transform group-hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-[#FACC15]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase mb-4 italic text-white">Positional Understanding</h4>
+                    <p class="text-gray-400 leading-relaxed font-medium">
+                        Understand the "Why" through deep evaluation. We deconstruct how pawn structures dictate long-term plans, ensuring piece coordination and spatial advantages are maintained throughout the game.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PILLAR 03: THE ENDGAME (THE "END") -->
+            <div class="premium-card p-12 rounded-[3rem] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+                <div class="absolute -top-10 -right-10 text-9xl font-black text-white/[0.03] group-hover:text-blue-500/10 transition-colors">03</div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 bg-blue-600/20 rounded-2xl flex items-center justify-center border border-blue-500/30 mb-8 transition-transform group-hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase mb-4 italic text-white">Endgame Technique</h4>
+                    <p class="text-gray-400 leading-relaxed font-medium">
+                        Master the "End" of the game. From essential theoretical positions like Philidor and Lucena to practical skills like king activation and passed pawn conversion, we ensure you convert every advantage.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PILLAR 04: OPENING REPERTOIRE -->
+            <div class="premium-card p-12 rounded-[3rem] relative overflow-hidden group" data-aos="fade-up">
+                <div class="absolute -top-10 -right-10 text-9xl font-black text-white/[0.03] group-hover:text-[#FACC15]/10 transition-colors">04</div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 bg-[#FACC15]/20 rounded-2xl flex items-center justify-center border border-[#FACC15]/30 mb-8 transition-transform group-hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-[#FACC15]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5S19.832 5.477 21 6.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase mb-4 italic text-white">Strategic Repertoire</h4>
+                    <p class="text-gray-400 leading-relaxed font-medium">
+                        Focus on plans over rote memorization. We build a reliable opening repertoire tailored to your style, focusing on understanding the structures and middlegame themes that follow.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PILLAR 05: THE FEEDBACK LOOP -->
+            <div class="premium-card p-12 rounded-[3rem] relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                <div class="absolute -top-10 -right-10 text-9xl font-black text-white/[0.03] group-hover:text-blue-500/10 transition-colors">05</div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 bg-blue-600/20 rounded-2xl flex items-center justify-center border border-blue-500/30 mb-8 transition-transform group-hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase mb-4 italic text-white">Game Analysis Loop</h4>
+                    <p class="text-gray-400 leading-relaxed font-medium">
+                        Continuous improvement through serious analysis. We review your games without engines first to identify thought process errors, followed by studying master-level classical and modern games.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PILLAR 06: COMMUNITY ENVIRONMENT -->
+            <div class="premium-card p-12 rounded-[3rem] border border-blue-500/20 relative overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+                <div class="absolute -top-10 -right-10 text-9xl font-black text-blue-500/[0.05]">06</div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 bg-blue-600/30 rounded-2xl flex items-center justify-center border border-blue-500/50 mb-8 transition-transform group-hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase mb-4 italic text-white">Active Ecosystem</h4>
+                    <p class="text-gray-400 leading-relaxed font-medium mb-6">
+                        Surround yourself with talent on **ChessMentor.io**. Just as my daily battles with varsity players accelerated my growth, this community provides the challenge needed to keep your learning active.
+                    </p>
+                    <a href="https://chessmentor.io" target="_blank" class="inline-flex items-center gap-2 text-[#FACC15] font-black uppercase text-[10px] tracking-widest hover:gap-4 transition-all">
+                        Join the Community <span class="text-xl">→</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- LEGACY TIMELINE SECTION -->
+<section class="py-40 px-6 bg-[#010413] relative overflow-hidden">
+    <!-- Background Decoration -->
+    <div class="absolute top-20 left-1/2 -translate-x-1/2 text-[10rem] font-black text-white/[0.02] select-none pointer-events-none uppercase tracking-tighter">
+        Legacy
+    </div>
+
+    <div class="max-w-6xl mx-auto relative z-10">
+        <div class="text-center mb-32">
+            <span class="text-blue-500 text-[10px] font-black uppercase tracking-[0.6em] mb-4 block" data-aos="fade-down">My Journey</span>
+            <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter italic" data-aos="fade-up">15 Years in <span class="text-[#FACC15]">Chess.</span></h2>
+        </div>
+        
+        <div class="relative">
+            <!-- Middle Vertical Line -->
+            <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-blue-500/30 md:-translate-x-1/2"></div>
+
+            <div class="space-y-32">
+                
+                <!-- 2023 - 2026: PRESENT DOMINANCE -->
+                <div class="relative flex flex-col md:flex-row items-center group" data-aos="fade-right">
+                    <div class="md:w-1/2 md:pr-20 pl-12 md:pl-0 text-left md:text-right">
+                        <span class="text-[#FACC15] text-xs font-black uppercase tracking-widest block mb-2 italic">2023 - 2026</span>
+                        <h4 class="text-3xl font-black uppercase italic mb-4 text-white">Winning & Coaching</h4>
+                        <p class="text-gray-400 font-medium leading-relaxed">
+                            Returning to active tournament play, I secured multiple championships including the Diwanag Festival. Simultaneously, many of my students achieved massive rating gains and won their own medals under my guidance.
+                        </p>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 top-1 md:top-auto w-10 h-10 bg-[#FACC15] rounded-full border-8 border-[#010413] md:-translate-x-1/2 z-20 transition-transform group-hover:scale-125 shadow-[0_0_20px_rgba(250,204,21,0.4)]"></div>
+                    <div class="md:w-1/2 hidden md:block"></div>
+                </div>
+
+                <!-- 2020 - 2022: THE PANDEMIC TRANSITION -->
+                <div class="relative flex flex-col md:flex-row items-center group" data-aos="fade-left">
+                    <div class="md:w-1/2 hidden md:block"></div>
+                    <div class="absolute left-0 md:left-1/2 top-1 md:top-auto w-10 h-10 bg-blue-600 rounded-full border-8 border-[#010413] md:-translate-x-1/2 z-20 transition-transform group-hover:scale-125 shadow-[0_0_20px_rgba(37,99,235,0.4)]"></div>
+                    <div class="md:w-1/2 md:pl-20 pl-12 text-left">
+                        <span class="text-blue-500 text-xs font-black uppercase tracking-widest block mb-2 italic">2020 - 2022</span>
+                        <h4 class="text-3xl font-black uppercase italic mb-4 text-white">Full-Time Online Coach</h4>
+                        <p class="text-gray-400 font-medium leading-relaxed">
+                            During the global pandemic, I transitioned into a full-time online coach. This period allowed me to perfect digital teaching methods while maintaining a peak online performance of 2500+.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2019: TITLE ACHIEVEMENT -->
+                <div class="relative flex flex-col md:flex-row items-center group" data-aos="fade-right">
+                    <div class="md:w-1/2 md:pr-20 pl-12 md:pl-0 text-left md:text-right">
+                        <span class="text-white text-xs font-black uppercase tracking-widest block mb-2 italic">2019</span>
+                        <h4 class="text-3xl font-black uppercase italic mb-4 text-white">Arena Grandmaster Title</h4>
+                        <p class="text-gray-400 font-medium leading-relaxed">
+                            I officially achieved the **Arena Grandmaster (AGM)** title. This milestone confirmed my skills as a master-level player on an international stage.
+                        </p>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 top-1 md:top-auto w-10 h-10 bg-white rounded-full border-8 border-[#010413] md:-translate-x-1/2 z-20 transition-transform group-hover:scale-125"></div>
+                    <div class="md:w-1/2 hidden md:block"></div>
+                </div>
+
+                <!-- 2016 - 2018: PNG & COACHING ORIGINS -->
+                <div class="relative flex flex-col md:flex-row items-center group" data-aos="fade-left">
+                    <div class="md:w-1/2 hidden md:block"></div>
+                    <div class="absolute left-0 md:left-1/2 top-1 md:top-auto w-10 h-10 bg-blue-400 rounded-full border-8 border-[#010413] md:-translate-x-1/2 z-20 transition-transform group-hover:scale-125 shadow-[0_0_20px_rgba(96,165,250,0.4)]"></div>
+                    <div class="md:w-1/2 md:pl-20 pl-12 text-left">
+                        <span class="text-blue-400 text-xs font-black uppercase tracking-widest block mb-2 italic">2016 - 2018</span>
+                        <h4 class="text-3xl font-black uppercase italic mb-4 text-white">PNG & Professional Coaching</h4>
+                        <p class="text-gray-400 font-medium leading-relaxed">
+                            In 2016, I began competing in the **Philippine National Games (PNG)**, representing Davao City and securing a Silver Medal in the Mindanao Qualifiers. This era also marked the official start of my professional coaching journey.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2015: ADDU TEAM CAPTAIN -->
+                <div class="relative flex flex-col md:flex-row items-center group" data-aos="fade-right">
+                    <div class="md:w-1/2 md:pr-20 pl-12 md:pl-0 text-left md:text-right">
+                        <span class="text-gray-400 text-xs font-black uppercase tracking-widest block mb-2 italic">2015</span>
+                        <h4 class="text-3xl font-black uppercase italic mb-4 text-white">AdDU Varsity Captain</h4>
+                        <p class="text-gray-400 font-medium leading-relaxed">
+                            I served as the **Team Captain** for the Ateneo de Davao University (AdDU) varsity team, leading the squad through prestigious collegiate and regional competitions.
+                        </p>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 top-1 md:top-auto w-10 h-10 bg-gray-400 rounded-full border-8 border-[#010413] md:-translate-x-1/2 z-20 transition-transform group-hover:scale-125"></div>
+                    <div class="md:w-1/2 hidden md:block"></div>
+                </div>
+
+                <!-- 2011 - 2015: VARSITY FOUNDATION -->
+                <div class="relative flex flex-col md:flex-row items-center group" data-aos="fade-left">
+                    <div class="md:w-1/2 hidden md:block"></div>
+                    <div class="absolute left-0 md:left-1/2 top-1 md:top-auto w-10 h-10 bg-white/10 rounded-full border-8 border-[#010413] md:-translate-x-1/2 z-20 transition-transform group-hover:scale-125"></div>
+                    <div class="md:w-1/2 md:pl-20 pl-12 text-left">
+                        <span class="text-gray-600 text-xs font-black uppercase tracking-widest block mb-2 italic">2011 - 2015</span>
+                        <h4 class="text-3xl font-black uppercase italic mb-4 text-white">Varsity Origins</h4>
+                        <p class="text-gray-400 font-medium leading-relaxed">
+                            Starting as a powerhouse varsity player for **Holy Cross**, I secured multiple Gold medals in school competitions and national-level tournaments.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+   <section class="py-40 px-6 bg-[#010413]">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-black uppercase tracking-tighter mb-20 text-center italic" data-aos="fade-up">Recent Championships</h2>
+            
+            <div class="relative trophy-timeline pl-16 space-y-16 max-w-2xl mx-auto">
+                
+                <!-- 1ST RUNNER-UP: MARCH 2026 -->
+                <div class="relative" data-aos="fade-left">
+                    <div class="absolute -left-[54px] top-0 w-10 h-10 bg-blue-600 rounded-full border-8 border-[#010413] flex items-center justify-center shadow-lg shadow-blue-500/20"></div>
+                    <span class="text-blue-500 text-[10px] font-black uppercase tracking-widest">March 2026</span>
+                    <h4 class="text-2xl md:text-4xl font-black uppercase mt-2 italic">1st Runner-Up</h4>
+                    <p class="text-gray-400 text-lg font-medium italic">City of Mati Chess Tournament</p>
+                </div>
+
+                <!-- CHAMPION: JANUARY 2026 -->
+                <div class="relative" data-aos="fade-left" data-aos-delay="100">
+                    <div class="absolute -left-[54px] top-0 w-10 h-10 bg-[#FACC15] rounded-full border-8 border-[#010413] flex items-center justify-center shadow-lg shadow-yellow-500/20"></div>
+                    <span class="text-blue-500 text-[10px] font-black uppercase tracking-widest">January 2026</span>
+                    <h4 class="text-2xl md:text-4xl font-black uppercase mt-2 italic">Champion</h4>
+                    <p class="text-gray-400 text-lg font-medium italic">MC Chessmates Rapid Chess Open</p>
+                </div>
+
+                <!-- CHAMPION: DECEMBER 2025 -->
+                <div class="relative" data-aos="fade-left" data-aos-delay="200">
+                    <div class="absolute -left-[54px] top-0 w-10 h-10 bg-[#FACC15] rounded-full border-8 border-[#010413] flex items-center justify-center shadow-lg shadow-yellow-500/20"></div>
+                    <span class="text-blue-500 text-[10px] font-black uppercase tracking-widest">December 2025</span>
+                    <h4 class="text-2xl md:text-4xl font-black uppercase mt-2 italic">Champion</h4>
+                    <p class="text-gray-400 text-lg font-medium italic">2nd Mayor Cyrex Basalo Diwanag Festival</p>
+                </div>
+
+                <!-- 2ND PLACE: DECEMBER 2025 -->
+                <div class="relative" data-aos="fade-left" data-aos-delay="300">
+                    <div class="absolute -left-[54px] top-0 w-10 h-10 bg-blue-600 rounded-full border-8 border-[#010413]"></div>
+                    <span class="text-blue-500 text-[10px] font-black uppercase tracking-widest">December 2025</span>
+                    <h4 class="text-2xl md:text-4xl font-black uppercase mt-2 italic">2nd Place</h4>
+                    <p class="text-gray-400 text-lg font-medium italic">17th RA Jan Mar B. Hondonero Monthly Open</p>
+                </div>
+
+                <!-- 3RD PLACE: NOVEMBER 2025 -->
+                <div class="relative" data-aos="fade-left" data-aos-delay="400">
+                    <div class="absolute -left-[54px] top-0 w-10 h-10 bg-white/10 rounded-full border-8 border-[#010413]"></div>
+                    <span class="text-blue-500 text-[10px] font-black uppercase tracking-widest">November 2025</span>
+                    <h4 class="text-2xl md:text-4xl font-black uppercase mt-2 italic">3rd Place</h4>
+                    <p class="text-gray-400 text-lg font-medium italic">2nd MC Standard Chess Tourney</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-40 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-gradient-to-br from-blue-600 to-blue-900 rounded-[4rem] p-12 md:p-24 relative overflow-hidden group shadow-2xl">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 blur-[100px] rounded-full -mr-20 -mt-20"></div>
+                
+                <div class="grid lg:grid-cols-2 gap-16 items-center relative z-10">
+                    <div data-aos="fade-right">
+                        <span class="text-blue-200 text-[10px] font-black uppercase tracking-[0.4em] mb-6 block">Proof of Concept</span>
+                        <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-8">
+                            See the <br> <span class="italic text-[#FACC15]">Evidence.</span>
+                        </h2>
+                        <p class="text-blue-100 text-xl font-medium leading-relaxed opacity-80">
+                            My success is defined by my students' growth. Swipe through 20+ documented transformations and victories.
+                        </p>
+                    </div>
+                    
+                    <div class="flex justify-center lg:justify-end" data-aos="fade-left">
+                        <a href="results.html" class="group relative bg-[#FACC15] text-black px-12 py-8 rounded-3xl font-black text-2xl uppercase tracking-widest hover:bg-white hover:scale-105 transition-all duration-500 shadow-2xl flex items-center gap-6">
+                            View Results
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 group-hover:translate-x-3 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <footer id="contact" class="bg-[#050A18] text-white pt-32 pb-12 overflow-hidden relative">
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
+  <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-600/10 blur-[150px] rounded-full"></div>
+
+  <div class="absolute bottom-0 right-0 text-[15rem] font-black text-white/[0.02] select-none pointer-events-none uppercase tracking-tighter leading-none">
+    Chess
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+      
+      <div class="space-y-8">
+        <h4 class="text-2xl font-black tracking-tighter logo-font">
+            <span class="text-white">COACH</span><span class="text-[#FACC15]">JIMZON</span>
+        </h4>
+        <p class="text-gray-400 text-sm leading-relaxed font-medium max-w-xs">
+            Bridging the gap between potential and peak performance. Providing world-class mentorship for players across the globe.
+        </p>
+        <div class="flex items-center gap-3">
+            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            <span class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 text-nowrap">Open for 1-on-1 Mentorship</span>
+        </div>
+      </div>
+
+      <div>
+        <h5 class="text-[11px] font-black uppercase tracking-[0.4em] text-[#FACC15] mb-8 border-l-2 border-[#FACC15] pl-4">Navigation</h5>
+        <ul class="space-y-4 text-sm font-bold text-gray-400">
+          <li><a href="#" class="hover:text-blue-400 hover:translate-x-2 transition-all inline-block">Home</a></li>
+          <li><a href="#about" class="hover:text-blue-400 hover:translate-x-2 transition-all inline-block">About Coach</a></li>
+          <li><a href="#coaching" class="hover:text-blue-400 hover:translate-x-2 transition-all inline-block">Programs</a></li>
+          <li><a href="#testimonials" class="hover:text-blue-400 hover:translate-x-2 transition-all inline-block">Success Stories</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-[11px] font-black uppercase tracking-[0.4em] text-[#FACC15] mb-8 border-l-2 border-[#FACC15] pl-4">Get In Touch</h5>
+        <ul class="space-y-6 text-sm font-bold text-gray-400">
+          <li class="group">
+            <span class="block text-[9px] text-gray-600 uppercase mb-1">Email Address</span>
+            <a href="mailto:coachjimzon@gmail.com" class="text-white hover:text-[#FACC15] transition-colors">coachjimzon@gmail.com</a>
+          </li>
+          <li>
+            <span class="block text-[9px] text-gray-600 uppercase mb-1">Location & Language</span>
+            <span class="text-white">Available Worldwide</span>
+            <p class="text-[9px] opacity-40 uppercase tracking-widest mt-1 italic">English Instruction</p>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="text-[11px] font-black uppercase tracking-[0.4em] text-[#FACC15] mb-8 border-l-2 border-[#FACC15] pl-4">Network</h5>
+        <div class="grid grid-cols-4 gap-3">
+          <a href="https://www.facebook.com/coachjimzon" target="_blank" class="w-11 h-11 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#1D4ED8] hover:-translate-y-1 transition-all duration-300 group">
+              <img src="images/facebook.png" class="w-5 invert opacity-50 group-hover:opacity-100 transition-opacity">
+          </a>
+          <a href="https://lichess.org/@/Davaochess" target="_blank" class="w-11 h-11 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#FACC15] hover:-translate-y-1 transition-all duration-300 group">
+              <img src="images/lichess.png" class="w-5 group-hover:scale-110 transition-transform">
+          </a>
+          <a href="https://www.chess.com/member/gmjimzon" target="_blank" class="w-11 h-11 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-[#81B64C] hover:-translate-y-1 transition-all duration-300 group">
+              <img src="images/chess.com.webp" class="w-5 group-hover:scale-110 transition-transform">
+          </a>
+          <a href="https://instagram.com/coachjimzon" target="_blank" class="w-11 h-11 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-pink-600 hover:-translate-y-1 transition-all duration-300 group">
+              <img src="images/instagram.webp" class="w-5 group-hover:scale-110 transition-transform">
+          </a>
+          <a href="https://www.linkedin.com/in/jimzontrangia/" target="_blank" class="w-11 h-11 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300 group">
+              <img src="images/linkedin.png" class="w-5 invert opacity-50 group-hover:opacity-100 transition-opacity">
+          </a>
+          <a href="https://ratings.fide.com/profile/yourid" target="_blank" class="w-11 h-11 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 hover:bg-gray-700 hover:-translate-y-1 transition-all duration-300 group">
+              <img src="images/fide.png" class="w-5 group-hover:brightness-125">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex flex-col items-center md:items-start gap-2">
+          <p class="text-[10px] font-black text-gray-600 uppercase tracking-[0.5em]">© 2026 AGM Jimzon Trangia</p>
+          <p class="text-[8px] font-bold text-gray-700 uppercase tracking-widest italic">Designed for Performance & Mastery</p>
+      </div>
+      <div class="flex gap-8 text-[10px] font-bold text-gray-600 uppercase tracking-widest">
+        <a href="#" class="hover:text-white transition">Privacy</a>
+        <a href="#" class="hover:text-white transition">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>
