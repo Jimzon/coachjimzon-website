@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# I-replace ang domain sa imong tinuod nga URL
+Sitemap: https://coachjimzon.com/sitemap.xml
